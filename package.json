@@ -1,10 +1,18 @@
 {
-  "name": "frontend-project-lvl1",
+  "name": "frontend-project-first",
   "version": "1.0.0",
   "description": "Brain games",
-  "main": "brain-games.js",
+  "main": "dist/index.js",
+  "bin": {
+    "brain-games": "dist/bin/brain-games.js"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -15,5 +23,12 @@
   "bugs": {
     "url": "https://github.com/Talinka/frontend-project-lvl1/issues"
   },
-  "homepage": "https://github.com/Talinka/frontend-project-lvl1#readme"
+  "homepage": "https://github.com/Talinka/frontend-project-lvl1#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.7.5",
+    "@babel/core": "^7.7.5",
+    "@babel/node": "^7.7.4",
+    "@babel/preset-env": "^7.7.6"
+  },
+  "dependencies": {}
 }
