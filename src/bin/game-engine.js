@@ -19,7 +19,7 @@ const gameEngine = (description, getGamePair) => {
   for (let i = 0; i < 3; i += 1) {
     const gamePair = getGamePair();
     const question = car(gamePair);
-    const rigthAnswer = cdr(gamePair);
+    const rigthAnswer = cdr(gamePair).toString();
     console.log(`Question: ${question} `);
     const answer = readlineSync.question('Your answer: ').toLowerCase();
 

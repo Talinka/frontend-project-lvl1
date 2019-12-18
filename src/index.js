@@ -34,7 +34,7 @@ const calcGame = () => {
         rigthAnswer = op1 * op2;
         break;
     }
-    return cons(expression, rigthAnswer.toString());
+    return cons(expression, rigthAnswer);
   };
   gameEngine(description, getGamePair);
 };
@@ -58,11 +58,30 @@ const gcdGame = () => {
   const getGamePair = () => {
     const num1 = getRandNum();
     const num2 = getRandNum();
-    return cons(`${num1} ${num2}`, gcd(num1, num2).toString());
+    return cons(`${num1} ${num2}`, gcd(num1, num2));
   };
 
   gameEngine(description, getGamePair);
 };
 
+const progressionGame = () => {
+  const description = 'What number is missing in the progression?';
+  const getGamePair = (count = 10) => {
+    const start = getRandNum();
+    const step = getRandNum(30) + 2;
+    const hide = getRandNum(count - 1);
+    let question = '';
+    const answer = start + hide * step;
+    for (let i = 0; i < count; i += 1) {
+      const num = (i === hide) ? '..' : start + i * step;
+      question = `${question} ${num}`;
+    }
+    return cons(question, answer);
+  };
 
-export { evenGame, calcGame, gcdGame };
+  gameEngine(description, getGamePair);
+};
+
+export {
+  evenGame, calcGame, gcdGame, progressionGame,
+};
