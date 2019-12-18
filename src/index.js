@@ -1,5 +1,5 @@
 import { cons } from '@hexlet/pairs';
-import { gameEngine } from './bin/game-engine';
+import { startGameEngine } from './bin/game-engine';
 
 const getRandNum = (max = 100) => Math.round(Math.random() * max);
 
@@ -11,7 +11,7 @@ const evenGame = () => {
     return cons(question, answer);
   };
 
-  gameEngine(description, getGamePair);
+  startGameEngine(description, getGamePair);
 };
 
 const calcGame = () => {
@@ -36,7 +36,7 @@ const calcGame = () => {
     }
     return cons(expression, rigthAnswer);
   };
-  gameEngine(description, getGamePair);
+  startGameEngine(description, getGamePair);
 };
 
 const gcd = (num1, num2) => {
@@ -61,7 +61,7 @@ const gcdGame = () => {
     return cons(`${num1} ${num2}`, gcd(num1, num2));
   };
 
-  gameEngine(description, getGamePair);
+  startGameEngine(description, getGamePair);
 };
 
 const progressionGame = () => {
@@ -79,9 +79,28 @@ const progressionGame = () => {
     return cons(question, answer);
   };
 
-  gameEngine(description, getGamePair);
+  startGameEngine(description, getGamePair);
+};
+
+const primeGame = () => {
+  const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
+  const getGamePair = () => {
+    const question = getRandNum();
+    let answer = true;
+
+    for (let i = 2; i < question; i += 1) {
+      if (question % i === 0) {
+        answer = false;
+        break;
+      }
+    }
+    return cons(question, answer ? 'yes' : 'no');
+  };
+
+  startGameEngine(description, getGamePair);
 };
 
 export {
-  evenGame, calcGame, gcdGame, progressionGame,
+  evenGame, calcGame, gcdGame, progressionGame, primeGame,
 };

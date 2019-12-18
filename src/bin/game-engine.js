@@ -12,7 +12,7 @@ const greeting = (text) => {
   return userName;
 };
 
-const gameEngine = (description, getGamePair) => {
+const startGameEngine = (description, getGamePair) => {
   const userName = greeting(description);
   console.log();
 
@@ -34,4 +34,4 @@ const gameEngine = (description, getGamePair) => {
   console.log(`Congratulations, ${userName}!`);
 };
 
-export { greeting, gameEngine };
+export { greeting, startGameEngine };
