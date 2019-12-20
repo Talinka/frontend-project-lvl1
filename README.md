@@ -4,12 +4,12 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/19b898e399f9a62effc7/test_coverage)](https://codeclimate.com/github/Talinka/frontend-project-lvl1/test_coverage)
 [![Build Status](https://travis-ci.com/Talinka/frontend-project-lvl1.svg?branch=master)](https://travis-ci.com/Talinka/frontend-project-lvl1)
 
-[![asciicast](https://asciinema.org/a/YlVwwBJ0UOKMVu6heAZ8Qjqmb.svg)](https://asciinema.org/a/YlVwwBJ0UOKMVu6heAZ8Qjqmb)
+[![asciicast](https://asciinema.org/a/uHgiuryGaEGfIWfjiPhLQHIMR.svg)](https://asciinema.org/a/uHgiuryGaEGfIWfjiPhLQHIMR)
 
-[![asciicast](https://asciinema.org/a/ula21NN5TviwQX9Uxs7mJpdFx.svg)](https://asciinema.org/a/ula21NN5TviwQX9Uxs7mJpdFx)
+[![asciicast](https://asciinema.org/a/SFOp4FcT0vCW9uQdgtZxup6Fo.svg)](https://asciinema.org/a/SFOp4FcT0vCW9uQdgtZxup6Fo)
 
-[![asciicast](https://asciinema.org/a/k50L2NJGmuPTtaYETWqRTowRh.svg)](https://asciinema.org/a/k50L2NJGmuPTtaYETWqRTowRh)
+[![asciicast](https://asciinema.org/a/6Yo8yaFbyIXvw163vXhAMX9gi.svg)](https://asciinema.org/a/6Yo8yaFbyIXvw163vXhAMX9gi)
 
-[![asciicast](https://asciinema.org/a/aJdhlazbkgwvUIexVqAEIXdiq.svg)](https://asciinema.org/a/aJdhlazbkgwvUIexVqAEIXdiq)
+[![asciicast](https://asciinema.org/a/Tf6vMoSQi0lY5wvnsVrpor6nj.svg)](https://asciinema.org/a/Tf6vMoSQi0lY5wvnsVrpor6nj)
 
-[![asciicast](https://asciinema.org/a/GPR14IcCkjRXX00R7zLlOuH8m.svg)](https://asciinema.org/a/GPR14IcCkjRXX00R7zLlOuH8m)
+[![asciicast](https://asciinema.org/a/pHvfnDAcCjESoUfnrKrW0XjWV.svg)](https://asciinema.org/a/pHvfnDAcCjESoUfnrKrW0XjWV)
