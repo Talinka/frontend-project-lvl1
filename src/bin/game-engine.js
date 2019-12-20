@@ -16,7 +16,8 @@ const startGameEngine = (description, getGamePair) => {
   const userName = greeting(description);
   console.log();
 
-  for (let i = 0; i < 3; i += 1) {
+  const roundCount = 3;
+  for (let i = 0; i < roundCount; i += 1) {
     const gamePair = getGamePair();
     const question = car(gamePair);
     const rigthAnswer = cdr(gamePair).toString();

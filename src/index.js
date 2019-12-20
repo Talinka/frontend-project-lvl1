@@ -1,7 +1,7 @@
 import { cons } from '@hexlet/pairs';
 import { startGameEngine } from './bin/game-engine';
 
-const getRandNum = (max = 100) => Math.round(Math.random() * max);
+const getRandNum = (max = 100, min = 0) => Math.round(Math.random() * (max - min)) + min;
 
 const evenGame = () => {
   const description = 'Answer "yes" if the number is even, otherwise answer "no"';
@@ -20,7 +20,7 @@ const calcGame = () => {
   const getGamePair = () => {
     const op1 = getRandNum();
     const op2 = getRandNum(op1);
-    const operator = operations[getRandNum(2)];
+    const operator = operations[getRandNum(operations.length - 1)];
     const expression = `${op1} ${operator} ${op2}`;
     let rigthAnswer;
     switch (operator) {
@@ -66,13 +66,16 @@ const gcdGame = () => {
 
 const progressionGame = () => {
   const description = 'What number is missing in the progression?';
-  const getGamePair = (count = 10) => {
+  const progressionMembersCount = 10;
+  const minStep = 2;
+  const maxStep = 30;
+  const getGamePair = () => {
     const start = getRandNum();
-    const step = getRandNum(30) + 2;
-    const hide = getRandNum(count - 1);
+    const step = getRandNum(maxStep, minStep);
+    const hide = getRandNum(progressionMembersCount - 1);
     let question = '';
     const answer = start + hide * step;
-    for (let i = 0; i < count; i += 1) {
+    for (let i = 0; i < progressionMembersCount; i += 1) {
       const num = (i === hide) ? '..' : start + i * step;
       question = `${question} ${num}`;
     }
