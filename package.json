@@ -1,7 +1,7 @@
 {
   "name": "frontend-project-first",
   "version": "1.0.0",
-  "description": "Brain games",
+  "description": "Simple console games",
   "bin": {
     "brain-games": "dist/bin/games/brain-games.js",
     "brain-even": "dist/bin/games/brain-even.js",
@@ -22,7 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/Talinka/frontend-project-lvl1.git"
   },
-  "author": "",
+  "keywords": [
+    "games",
+    "console",
+    "cli"
+  ],
+  "author": "Natalya Polikashina <polikashina@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Talinka/frontend-project-lvl1/issues"
