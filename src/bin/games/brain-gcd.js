@@ -1,5 +1,5 @@
 #! /usr/bin/env node
 
-import { gcdGame } from '../..';
+import gcdGame from '../../gcd-game';
 
 gcdGame();

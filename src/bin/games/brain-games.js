@@ -1,5 +1,5 @@
 #! /usr/bin/env node
 
-import { greeting } from '../game-engine';
+import startGameEngine from '../game-engine';
 
-greeting();
+startGameEngine();

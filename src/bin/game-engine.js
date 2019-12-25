@@ -1,26 +1,23 @@
 import readlineSync from 'readline-sync';
 import { car, cdr } from '@hexlet/pairs';
 
-const greeting = (text) => {
-  console.log('Welcome to the Brain Games!');
-  if (text) {
-    console.log(text);
-  }
-  console.log();
-  const userName = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${userName}!`);
-  return userName;
-};
+const roundCount = 3;
 
 const startGameEngine = (description, getGamePair) => {
-  const userName = greeting(description);
-  console.log();
+  console.log('Welcome to the Brain Games!');
+  if (description) {
+    console.log(description);
+  }
+  const userName = readlineSync.question('\nMay I have your name? ');
+  console.log(`Hello, ${userName}!\n`);
 
-  const roundCount = 3;
+  if (!getGamePair) {
+    return;
+  }
   for (let i = 0; i < roundCount; i += 1) {
     const gamePair = getGamePair();
     const question = car(gamePair);
-    const rigthAnswer = cdr(gamePair).toString();
+    const rigthAnswer = cdr(gamePair);
     console.log(`Question: ${question} `);
     const answer = readlineSync.question('Your answer: ').toLowerCase();
 
@@ -35,4 +32,4 @@ const startGameEngine = (description, getGamePair) => {
   console.log(`Congratulations, ${userName}!`);
 };
 
-export { greeting, startGameEngine };
+export default startGameEngine;
