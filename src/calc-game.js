@@ -1,6 +1,6 @@
 import { cons } from '@hexlet/pairs';
 import getRandNum from './utils';
-import startGameEngine from './bin/game-engine';
+import startGameEngine from './game-engine';
 
 const description = 'What is the result of the expression?';
 const operations = '+-*';

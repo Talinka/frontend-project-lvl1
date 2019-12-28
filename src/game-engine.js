@@ -5,15 +5,11 @@ const roundCount = 3;
 
 const startGameEngine = (description, getGamePair) => {
   console.log('Welcome to the Brain Games!');
-  if (description) {
-    console.log(description);
-  }
+  console.log(description);
+
   const userName = readlineSync.question('\nMay I have your name? ');
   console.log(`Hello, ${userName}!\n`);
 
-  if (!getGamePair) {
-    return;
-  }
   for (let i = 0; i < roundCount; i += 1) {
     const gamePair = getGamePair();
     const question = car(gamePair);
