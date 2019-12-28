@@ -2,6 +2,8 @@ import { cons } from '@hexlet/pairs';
 import getRandNum from './utils';
 import startGameEngine from './bin/game-engine';
 
+const description = 'Find the greatest common divisor of given numbers.';
+
 const gcd = (num1, num2) => {
   if (num1 < num2) {
     return gcd(num2, num1);
@@ -16,14 +18,15 @@ const gcd = (num1, num2) => {
   return n2;
 };
 
-const gcdGame = () => {
-  const description = 'Find the greatest common divisor of given numbers.';
-  const getGamePair = () => {
-    const num1 = getRandNum();
-    const num2 = getRandNum();
-    return cons(`${num1} ${num2}`, `${gcd(num1, num2)}`);
-  };
+const getGamePair = () => {
+  const num1 = getRandNum();
+  const num2 = getRandNum();
+  const question = `${num1} ${num2}`;
+  const answer = `${gcd(num1, num2)}`;
+  return cons(question, answer);
+};
 
+const gcdGame = () => {
   startGameEngine(description, getGamePair);
 };
 
