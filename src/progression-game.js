@@ -9,8 +9,8 @@ const progressionGame = () => {
   const maxStep = 30;
   const getGamePair = () => {
     const start = getRandNum();
-    const step = getRandNum(maxStep, minStep);
-    const hide = getRandNum(progressionMembersCount - 1);
+    const step = getRandNum(minStep, maxStep);
+    const hide = getRandNum(0, progressionMembersCount - 1);
     let question = '';
     const answer = `${start + hide * step}`;
     for (let i = 0; i < progressionMembersCount; i += 1) {

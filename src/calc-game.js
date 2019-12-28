@@ -7,8 +7,8 @@ const calcGame = () => {
   const operations = '+-*';
   const getGamePair = () => {
     const op1 = getRandNum();
-    const op2 = getRandNum(op1);
-    const operator = operations[getRandNum(operations.length - 1)];
+    const op2 = getRandNum(0, op1);
+    const operator = operations[getRandNum(0, operations.length - 1)];
     const expression = `${op1} ${operator} ${op2}`;
     let rigthAnswer;
     switch (operator) {
