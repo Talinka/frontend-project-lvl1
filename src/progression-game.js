@@ -8,21 +8,21 @@ const progressionMembersCount = 10;
 const minStep = 2;
 const maxStep = 30;
 
-const getGamePair = () => {
+const getGameData = () => {
   const start = getRandNum();
   const step = getRandNum(minStep, maxStep);
-  const hide = getRandNum(0, progressionMembersCount - 1);
+  const hiddenMember = getRandNum(0, progressionMembersCount - 1);
   let question = '';
-  const answer = `${start + hide * step}`;
   for (let i = 0; i < progressionMembersCount; i += 1) {
-    const num = (i === hide) ? '..' : start + i * step;
-    question = `${question} ${num}`;
+    const progressionMember = (i === hiddenMember) ? '..' : start + i * step;
+    question = `${question} ${progressionMember}`;
   }
-  return cons(question, answer);
+  const answer = (start + hiddenMember * step).toString();
+  return cons(question.trim(), answer);
 };
 
 const progressionGame = () => {
-  startGameEngine(description, getGamePair);
+  startGameEngine(description, getGameData);
 };
 
 export default progressionGame;

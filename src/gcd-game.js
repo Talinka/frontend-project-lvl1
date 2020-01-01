@@ -18,7 +18,7 @@ const gcd = (num1, num2) => {
   return n2;
 };
 
-const getGamePair = () => {
+const getGameData = () => {
   const num1 = getRandNum();
   const num2 = getRandNum();
   const question = `${num1} ${num2}`;
@@ -27,7 +27,7 @@ const getGamePair = () => {
 };
 
 const gcdGame = () => {
-  startGameEngine(description, getGamePair);
+  startGameEngine(description, getGameData);
 };
 
 export default gcdGame;

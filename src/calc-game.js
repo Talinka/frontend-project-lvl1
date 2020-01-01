@@ -5,7 +5,7 @@ import startGameEngine from './game-engine';
 const description = 'What is the result of the expression?';
 const operations = '+-*';
 
-const getGamePair = () => {
+const getGameData = () => {
   const op1 = getRandNum();
   const op2 = getRandNum(0, op1);
   const operator = operations[getRandNum(0, operations.length - 1)];
@@ -26,7 +26,7 @@ const getGamePair = () => {
 };
 
 const calcGame = () => {
-  startGameEngine(description, getGamePair);
+  startGameEngine(description, getGameData);
 };
 
 export default calcGame;
