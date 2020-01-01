@@ -1,6 +1,6 @@
 import { cons } from '@hexlet/pairs';
-import getRandNum from './utils';
-import startGameEngine from './game-engine';
+import getRandNum from '../utils';
+import startGameEngine from '../game-engine';
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no"';
 
