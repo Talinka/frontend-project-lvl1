@@ -3,7 +3,7 @@ import { car, cdr } from '@hexlet/pairs';
 
 const roundsCount = 3;
 
-const startGameEngine = (description, getGameData) => {
+const playGame = (description, getGameData) => {
   console.log('Welcome to the Brain Games!');
   console.log(description);
 
@@ -28,4 +28,4 @@ const startGameEngine = (description, getGameData) => {
   console.log(`Congratulations, ${userName}!`);
 };
 
-export default startGameEngine;
+export default playGame;

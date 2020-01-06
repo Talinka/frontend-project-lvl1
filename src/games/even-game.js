@@ -1,6 +1,6 @@
 import { cons } from '@hexlet/pairs';
 import getRandNum from '../utils';
-import startGameEngine from '../game-engine';
+import playGame from '../game-engine';
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no"';
 
@@ -14,7 +14,7 @@ const getGameData = () => {
 
 
 const evenGame = () => {
-  startGameEngine(description, getGameData);
+  playGame(description, getGameData);
 };
 
 export default evenGame;

@@ -1,19 +1,19 @@
 import { cons } from '@hexlet/pairs';
 import getRandNum from '../utils';
-import startGameEngine from '../game-engine';
+import playGame from '../game-engine';
 
 const description = 'What number is missing in the progression?';
 
-const progressionMembersCount = 10;
+const progressionLength = 10;
 const minStep = 2;
 const maxStep = 30;
 
 const getGameData = () => {
   const start = getRandNum();
   const step = getRandNum(minStep, maxStep);
-  const hiddenMember = getRandNum(0, progressionMembersCount - 1);
+  const hiddenMember = getRandNum(0, progressionLength - 1);
   let question = '';
-  for (let i = 0; i < progressionMembersCount; i += 1) {
+  for (let i = 0; i < progressionLength; i += 1) {
     const progressionMember = (i === hiddenMember) ? '..' : start + i * step;
     question = `${question} ${progressionMember}`;
   }
@@ -22,7 +22,7 @@ const getGameData = () => {
 };
 
 const progressionGame = () => {
-  startGameEngine(description, getGameData);
+  playGame(description, getGameData);
 };
 
 export default progressionGame;
