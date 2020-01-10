@@ -14,8 +14,8 @@ const getGameData = () => {
   const hiddenMember = getRandNum(0, progressionLength - 1);
   let question = '';
   for (let i = 0; i < progressionLength; i += 1) {
-    const progressionMember = (i === hiddenMember) ? '..' : start + i * step;
-    question = `${question} ${progressionMember}`;
+    const progressionMemberIndex = (i === hiddenMember) ? '..' : start + i * step;
+    question = `${question} ${progressionMemberIndex}`;
   }
   const answer = (start + hiddenMember * step).toString();
   return cons(question.trim(), answer);

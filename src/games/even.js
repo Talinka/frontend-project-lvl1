@@ -12,7 +12,6 @@ const getGameData = () => {
   return cons(question, answer);
 };
 
-
 const evenGame = () => {
   playGame(description, getGameData);
 };

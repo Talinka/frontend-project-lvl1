@@ -18,9 +18,11 @@ const getGameData = () => {
     case '-':
       answer = op1 - op2;
       break;
-    default:
+    case '*':
       answer = op1 * op2;
       break;
+    default:
+      answer = undefined;
   }
   return cons(question, answer.toString());
 };
