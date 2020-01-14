@@ -22,7 +22,6 @@ const getGameData = () => {
   return cons(question, answer);
 };
 
-
 const primeGame = () => {
   playGame(description, getGameData);
 };

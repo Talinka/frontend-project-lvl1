@@ -22,7 +22,7 @@ const getGameData = () => {
       answer = op1 * op2;
       break;
     default:
-      answer = undefined;
+      answer = null;
   }
   return cons(question, answer.toString());
 };
